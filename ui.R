@@ -25,6 +25,10 @@ ui <- fluidPage(
     
     #Set up main panel for the plot
     mainPanel(
-      plotOutput("plot"))
-  )
-)
+      fluidRow(plotOutput("plot")),
+      br(),
+      fluidRow(downloadButton('covid_download'))
+      ) # end mainpanel
+) # end sidebar
+
+) # end ui
